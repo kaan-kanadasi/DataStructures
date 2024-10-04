@@ -1,0 +1,41 @@
+IP - Internet Protocol, every internet working device has a IP
+ - number.number.number.number
+when sending packages there is a sorce adress and a destination adress to which it is going 
+soruces adress + delivery adress
+
+IP alone is not enough to guarantee delivery, ex router is overwelmed - recieving too many pacages and drop some pacages
+TCP - used with conjunction with IP - guarantees delivery
+soruces adress + delivery adress + sequence number + port number
+
+another feautre is ports - expalining the type of of data here in
+
+port numbers:
+- 80 HTTP
+- 443 HTTPS
+
+TCP is the pair of protocols that the internet uses to get data form pont A to pont 
+TCP guarantees delivery with sequence number and helps the servers do more than one thing
+IP standardazis hwo the adresses work
+
+
+DNS - Domain Name System Servers
+-  what is the IP adress for this domain 
+
+dictionary/hash table:
+(fully qualifies) Domain Name| IP Adresses
+-----------------------------|------------
+asking the nearest DNS server - recursive hiereical system 
+
+
+DHCP - Dynamic Host Configuration Protocol 
+-  what should be my DNS server and router 
+- what IP adress my device should use
+
+
+HTPP - Hyper Text Transfer Protocol
+HTPPS - Hyper Text Transfer Protocol Secured - uses encyription to hide what is inside the package for interference
+the protocol that is used by the World Wide Web
+
+
+GET - getting information - clicking on a website
+POST - sending information - upload a image to a website (pushing information)

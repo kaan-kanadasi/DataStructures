@@ -2,6 +2,7 @@
 
 #include <stdio.h>
 #include <stdlib.h> 
+#define CAPACITY 50
 
 typedef struct
 {
@@ -16,10 +17,10 @@ Person;
 waiting for a dining hall line
 shipping cargo to firstly to the first buyer
 */ 
-const int CAPACITY = 50;
+
 typedef struct
 {
-    Person people [CAPACITY];
+    Person people[CAPACITY];
     int size;
 } queue;
 
@@ -32,7 +33,7 @@ spotify - we want to see the most recent liked songs
 */ 
 typedef struct
 {
-    Person people [CAPACITY];
+    Person people[CAPACITY];
     int size;
 } stack;
 
@@ -127,7 +128,7 @@ int main(int argc, char *argv[])
 
 
     // reverse order - prepending (O(1))
-    node *list = NULL; // This initializes list as a pointer to the first node in the linked list.
+    node *list2 = NULL; // This initializes list as a pointer to the first node in the linked list.
 
     // for loop starts from i = 1 because argv[0] contains the program name
     for(int i=1; i < argc; i++) {
@@ -138,10 +139,10 @@ int main(int argc, char *argv[])
             return 1;
         }
         n->number = number; // n->number equals (*n).number = 1;
-        n->next = list; // the next pointer of the new node is set to point to the current head of the list (list).
-        list = n; // makes list poitn to the same thing that n points to 
+        n->next = list2; // the next pointer of the new node is set to point to the current head of the list (list).
+        list2 = n; // makes list poitn to the same thing that n points to 
     }
-    node *ptr = list;
+    node *ptr = list2;
     while(ptr != NULL) // so that the poitner is not at the end of the list
     {
         printf("%i\n", ptr->number);
@@ -151,7 +152,7 @@ int main(int argc, char *argv[])
 
 
     // sorted order - appending (O(N))
-    node *list = NULL; // Memmory for numbers
+    node *list3 = NULL; // Memmory for numbers
 
     for(int i=1; i < argc; i++) {
         int number = atoi(argv[i]); 
@@ -164,19 +165,19 @@ int main(int argc, char *argv[])
         n->next = NULL; 
 
         // If list is empty
-        if(list == NULL) {
+        if(list3 == NULL) {
             // This node is the whole list
-            list = n;
+            list3 = n;
         } 
         // if number belongs at the beggining of the list
-        else if (n->number < list->number) {
-            n->next = list;
-            list = n;
+        else if (n->number < list3->number) {
+            n->next = list3;
+            list3 = n;
         }
         // if number belongs ater in the list
         else {
             // Iterate over nodes in list
-            for(node *ptr= list; ptr != NULL; ptr = ptr->next) {
+            for(node *ptr= list3; ptr != NULL; ptr = ptr->next) {
                 // If at end of lsit
                 if(ptr->next == NULL) {
                     // Append node

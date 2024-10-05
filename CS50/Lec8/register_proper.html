@@ -1,0 +1,26 @@
+<!-- DOM is document object model, a tree in the computers ram that represents a web page -->
+ <!-- none of this code will get executed until the whole DOM is ready -->
+
+<!Doctype html> 
+
+    <html lang="en"> 
+        <head>
+            <script>
+
+                document.addEventListener('DOMContentLoaded', function() {
+                    document.querySelector('from').addEventListener('submit', function(e) {
+                        alert('hello, ' + document.querySelector('#name').value);
+                        e.preventDefault();
+                    });
+                });
+                
+            </script>
+            <title>Register</title>
+        </head>
+        <body>
+            <form> 
+                <input autocomplete="off" autofocus id="name" type="email" placeholder="text" pattern=".+@.+\.com"> 
+                <input type="submit">
+            </form>
+        </body>
+    </htlm>

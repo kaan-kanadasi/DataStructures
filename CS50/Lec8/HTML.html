@@ -1,13 +1,59 @@
-<!-- http-server -->
+<!--
+If your file path issue persists, you can set up a simple local server to display the file in a browser:
 
-<!Doctype html>
-    <htlm lang="en">
+    Open a terminal or command prompt. Navigate to the directory where your HTML file is located.
+    Run a local server using Python:
+        python -m http.server
+    Open a browser and go to:
+        http://localhost:8000/HTML.html
+-->
+
+<!Doctype html> <!-- Meaning I am using the lates version of html lang-->
+
+    <html lang="en"> <!-- start tag and its attribute "en"-->
         <head>
+            <style>
+                a
+                {
+                    color: red
+                }
+            </style>
             <title>
                 hello, title
             </title>
         </head>
         <body>
+            <h1>
+                Body 1
+            </h1>
+            hello, body <!-- html doesn't care about the space that we but it will only leave one space for each text block -->
+
+
             hello, body
+            <h2>
+                Body 2
+            </h2>
+            <p> <!-- paragrapgh tag -->
+                hello, body
+            </p>
+            <ul> <!-- unordered list tag -->
+                <li>foo</li> <!-- list item tag -->
+                <li>bar</li> 
+                <li>baz</li>
+            </ul>
+            <ol> <!-- ordered list tag -->
+                <li>foo</li> <!-- list item tag -->
+                <li>bar</li> 
+                <li>baz</li>
+            </ol>
+
+            <form action="https://www.google.com/search" method="get">
+                <input autocomplete="off" autofocus="True" name="q" type="search" placeholder="..."> <!-- this is what google servers expect -->
+                <button>Search</button>
+            </form>
+
+            visit <a href="https://www.harvard.edu/">Harvard</a>
+
+            <img alt="background" src="image/background.jpg" width="400" height="250">
         </body>
-    </htlm>
+    </htlm> <!-- close tag -->

@@ -25,10 +25,10 @@ typedef struct
 } queue;
 
 
-/* staks charesteristic called LIFO (last in first out)
+/* stacks charesteristic called LIFO (last in first out)
     - push 
     - pop
-gmail - we want to see the eamils that came at last
+gmail - we want to see the emails that came at last
 spotify - we want to see the most recent liked songs 
 */ 
 typedef struct
